@@ -14,7 +14,7 @@
             <h2>Informació empleats</h2>
             <div class="well clearfix">
                 <legend class="scheduler-border">Afegir un nou empleat</legend>
-                <form onsubmit="return info();" class="form-inline" id="formulari">
+                <form onsubmit="return comprovarNomLliantges();" class="form-inline" id="formulari">
                     <div class="form-group" id="i1"><!--input del nom-->
                         <label>Nom</label>
                         <input type="text" class=form-control name="nom" id="nom"required>
@@ -25,19 +25,19 @@
                     </div>
                     <div class="form-group" id="i3" ><!--input del password-->
                         <label style="margin-left:20px">Password</label>
-                        <input type="password" class=form-control name="password" id="password" required>
+                        <input type="password" class=form-control name="password" id="password" >
                     </div>
                     <div class="form-group" id="i4" ><!--input de la data de naixement-->
                         <label style="margin-left:20px"> Data de naixement</label>
-                        <input type="date" class=form-control name="datanaix" id="datanaix" required>
+                        <input type="date" class=form-control name="datanaix" id="datanaix" >
                     </div>
                     <div class="form-group" id="i5" ><!--input del salari-->
                         <label style="margin-left:20px"> Salari</label>
-                        <input type="number" min="500" max="3000" class=form-control name="salari" id="salari" required>
+                        <input type="number" min="500" max="3000" class=form-control name="salari" id="salari" >
                     </div>
                     <div class="form-group" id="i6" ><!--input de l'IRPF-->
                         <label style="margin-left:20px">% IRPF</label>
-                        <input type="number" min="0" max="100" class=form-control name="irpf" id="irpf" required>
+                        <input type="number" min="0" max="100" class=form-control name="irpf" id="irpf" >
                     </div>
                     <!--botó per registrar un empleat-->
                     <button id="registrar" type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:20px"><i class="glyphicon glyphicon-cloud-upload"></i> Acceptar</button>

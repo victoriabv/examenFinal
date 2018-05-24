@@ -16,20 +16,19 @@ function calcularSalariNet(){
     var salariNet=salari-(salari*irpf/100);
     return salariNet;
 }
-    
-     
-    function info(){//funció per mostrar les dades en un alert
-        var edat=calcularEdat();
-        var salNet=calcularSalariNet();
-        if(calcularEdat){
-            var nom=$("#nom").val();
-            var llinatges=$("#llinatges").val();
-            
-            alert ("NOM I LLINATGES: "+nom +llinatges+"\n"+"EDAT: "+edat+"\n"+"SALARI NET: "+salNet);
-            document.getElementById("formulari").reset();
-            return false;
-        }else{
-            document.getElementById("formulari").reset();
-            return false;
-        } 
-    }
+
+
+function info(){//funció per mostrar les dades en un alert
+    var edat=calcularEdat();
+    var salNet=calcularSalariNet();
+    if(edat){
+        var nom=$("#nom").val();
+        var llinatges=$("#llinatges").val();  
+        alert ("NOM I LLINATGES: "+nom+" "+llinatges+"\n"+"EDAT: "+edat+"\n"+"SALARI NET: "+salNet);
+        document.getElementById("formulari").reset();
+        return false;
+    }else{
+        document.getElementById("formulari").reset();
+        return false;
+    } 
+}
