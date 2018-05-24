@@ -25,12 +25,26 @@ function calcularSalariNet(){
     return salariNet;
 }
 
+/*Funció per assegurar que el password té més de 10 caràcters.
+Li passam el password per paràmetre i amb el methode "lenght"
+miram la seva extensió*/
+function comprovarPassword(){
+    var pass=$("#password").val();
+    var mida=pass.length;
+    if(mida<10){
+        alert ("El password ha de tenir com a mínim 10 caràcters");
+        return false;
+    }
+    return password;
+}
+
 /*Funció mostrar les dades en un alert, es mostren: nom i llinatge, edat i salari net.
 Només es mostren les dades si la funció "calcularEdat" ha retornat una edat*/
 function info(){//funció per mostrar les dades en un alert
     var edat=calcularEdat();
     var salNet=calcularSalariNet();
-    if(edat){
+    var password=comprovarPassword();
+    if(edat && password){
         var nom=$("#nom").val();
         var llinatges=$("#llinatges").val();  
         alert ("NOM I LLINATGES: "+nom+" "+llinatges+"\n"+"EDAT: "+edat+"\n"+"SALARI NET: "+salNet);
