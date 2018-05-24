@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exàmen pràctic</title><!--títol de la pàgina-->
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--enllaç al jquery-->
+        <script src="js/js.js"></script><!--enllaç als scripts-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--enllaç al bootstrap-->
+        <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="padding:10px 10px;" id="contenidor"><!--div que conté tot el contingut-->
+            <h2>Informació empleats</h2>
+            <div class="well clearfix">
+                <legend class="scheduler-border">Afegir un nou empleat</legend>
+                <form onsubmit="return info();" class="form-inline" id="formulari">
+                    <div class="form-group" id="i1"><!--input del nom-->
+                        <label>Nom</label>
+                        <input type="text" class=form-control name="nom" id="nom"required>
+                    </div>
+                    <div class="form-group" id="i2" ><!--input dels llinatges-->
+                        <label style="margin-left:20px">Llinatges</label>
+                        <input type="text" class=form-control name="llinatges" id="llinatges" required>
+                    </div>
+                    <div class="form-group" id="i3" ><!--input del password-->
+                        <label style="margin-left:20px">Password</label>
+                        <input type="password" class=form-control name="password" id="password" required>
+                    </div>
+                    <div class="form-group" id="i4" ><!--input de la data de naixement-->
+                        <label style="margin-left:20px"> Data de naixement</label>
+                        <input type="date" class=form-control name="datanaix" id="datanaix" required>
+                    </div>
+                    <div class="form-group" id="i5" ><!--input del salari-->
+                        <label style="margin-left:20px"> Salari</label>
+                        <input type="number" min="500" max="3000" class=form-control name="salari" id="salari" required>
+                    </div>
+                    <div class="form-group" id="i6" ><!--input de l'IRPF-->
+                        <label style="margin-left:20px">% IRPF</label>
+                        <input type="number" min="0" max="100" class=form-control name="irpf" id="irpf" required>
+                    </div>
+                    <!--botó per registrar un empleat-->
+                    <button id="registrar" type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:20px"><i class="glyphicon glyphicon-cloud-upload"></i> Acceptar</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <!--Per: Victòria Binimelis Vadell. Maig 2018-->
+</html>
