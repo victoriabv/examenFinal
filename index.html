@@ -7,43 +7,54 @@
         <script src="js/js.js"></script><!--enllaç als scripts-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--enllaç al bootstrap-->
-        <script src="http://momentjs.com/downloads/moment.min.js"></script>
     </head>
     <body>
-        <div class="container" style="padding:10px 10px;" id="contenidor"><!--div que conté tot el contingut-->
+        <!--div que conté tot el contingut-->
+        <div class="container" id="contenidor" style="width:500px;"><!--no he cregut oportú crear un full d'estil css per només una característica-->
             <h2>Informació empleats</h2>
+            <!--div que conté el formulari-->
             <div class="well clearfix">
-                <legend class="scheduler-border">Afegir un nou empleat</legend>
-                <form onsubmit="return comprovarNomLliantges();" class="form-inline" id="formulari">
-                    <div class="form-group" id="i1"><!--input del nom-->
+                <!--llegenda-->
+                <legend class="scheduler-border">Afegir dades</legend>
+                <!--formulari pròpiament dit. Quan es clica el botó s'executa la funció "info"-->
+                <form onsubmit="return info();" id="formulari">
+                    <!--input del nom amb la icona-->
+                    <div class="form-group">
+                        <span><i class="glyphicon glyphicon-user"></i></span>
                         <label>Nom</label>
-                        <input type="text" class=form-control name="nom" id="nom"required>
+                        <input type="text" class=form-control name="nom" id="nom" placeholder="introdueix el nom" required>
                     </div>
-                    <div class="form-group" id="i2" ><!--input dels llinatges-->
-                        <label style="margin-left:20px">Llinatges</label>
-                        <input type="text" class=form-control name="llinatges" id="llinatges" required>
+                    <!--input dels llinatges amb la icona-->
+                    <div class="form-group">
+                        <span><i class="glyphicon glyphicon-user"></i></span><label class="lb">Llinatges</label>
+                        <input type="text" class=form-control name="llinatges" id="llinatges" placeholder="introdueix els llinatges" required>
                     </div>
-                    <div class="form-group" id="i3" ><!--input del password-->
-                        <label style="margin-left:20px">Password</label>
-                        <input type="password" class=form-control name="password" id="password" >
+                    <!--input del password amb la icona-->
+                    <div class="form-group">
+                        <span><i class="glyphicon glyphicon-lock"></i></span><label class="lb">Password</label>
+                        <input type="password" class=form-control name="password" id="password" placeholder="introdueix la contrassenya" required>
                     </div>
-                    <div class="form-group" id="i4" ><!--input de la data de naixement-->
-                        <label style="margin-left:20px"> Data de naixement</label>
-                        <input type="date" class=form-control name="datanaix" id="datanaix" >
+                    <!--input de la data de naixement-->
+                    <div class="form-group">
+                        <label class="lb"> Data de naixement</label>
+                        <input type="date" class=form-control name="datanaix" id="datanaix" required>
                     </div>
-                    <div class="form-group" id="i5" ><!--input del salari-->
-                        <label style="margin-left:20px"> Salari</label>
-                        <input type="number" min="500" max="3000" class=form-control name="salari" id="salari" >
+                    <!--input del salari amb la icona-->
+                    <div class="form-group">
+                        <span><i class="glyphicon glyphicon-euro"></i></span>
+                        <label class="lb"> Salari</label>
+                        <input type="number" min="500" max="3000" class=form-control name="salari" id="salari" required>
                     </div>
-                    <div class="form-group" id="i6" ><!--input de l'IRPF-->
-                        <label style="margin-left:20px">% IRPF</label>
-                        <input type="number" min="0" max="100" class=form-control name="irpf" id="irpf" >
+                    <!--input de l'IRPF-->
+                    <div class="form-group">
+                        <label class="lb">% IRPF</label>
+                        <input type="number" min="0" max="100" class=form-control name="irpf" id="irpf" required>
                     </div>
-                    <!--botó per registrar un empleat-->
-                    <button id="registrar" type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:20px"><i class="glyphicon glyphicon-cloud-upload"></i> Acceptar</button>
+                    <!--botó per mostrar les dades de l'empleat-->
+                    <button id="registrar" type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:20px"><i class="glyphicon glyphicon-ok"></i> Acceptar</button>
                 </form>
             </div>
         </div>
     </body>
-    <!--Per: Victòria Binimelis Vadell. Maig 2018-->
+    <!--Per: Victòria Binimelis Vadell. 24 de Maig 2018-->
 </html>

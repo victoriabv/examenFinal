@@ -1,4 +1,9 @@
-function calcularEdat(){//funció per validar que l'empleat tengui més de 18 anys
+/*Funció per validar que l'empleat tengui més de 18 anys.
+Li passam l'edat per paràmetre i ho restam al data da'vui. 
+Si l'empleat té menys de 18 mostra un alert i retorna false;
+si l'empleat té 18 anys o més retorna l'edat, que serà usada
+a la funció "info"*/
+function calcularEdat(){
     var datanaix=new Date ($("#datanaix").val());
     var avui=new Date();
     var edat=parseInt((avui -datanaix)/365/24/60/60/1000);
@@ -10,6 +15,9 @@ function calcularEdat(){//funció per validar que l'empleat tengui més de 18 an
     }
 }
 
+/*Funció per calcular el salari net.
+Li passa el salari brut per paràmetre i li restam el percentatge de l'IRPF.
+Retorna sempre el salari net que s'usa a la funció "info"*/
 function calcularSalariNet(){
     var salari=$("#salari").val();
     var irpf=$("#irpf").val();
@@ -17,7 +25,8 @@ function calcularSalariNet(){
     return salariNet;
 }
 
-
+/*Funció mostrar les dades en un alert, es mostren: nom i llinatge, edat i salari net.
+Només es mostren les dades si la funció "calcularEdat" ha retornat una edat*/
 function info(){//funció per mostrar les dades en un alert
     var edat=calcularEdat();
     var salNet=calcularSalariNet();
@@ -32,3 +41,5 @@ function info(){//funció per mostrar les dades en un alert
         return false;
     } 
 }
+
+//Per: Victòria Binimelis Vadell. 24 de Maig 2018
